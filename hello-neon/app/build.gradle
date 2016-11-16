@@ -29,6 +29,11 @@ android {
         }
     }
     productFlavors {
+        arm8 {
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+        }
         arm7 {
             ndk {
                 abiFilters 'armeabi-v7a'
@@ -45,5 +50,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta3'
 }
